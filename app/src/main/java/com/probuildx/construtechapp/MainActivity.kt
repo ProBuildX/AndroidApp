@@ -21,7 +21,7 @@ class MainActivity : ComponentActivity() {
             ConstrutechAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Android",
+                        name = "CONSTRUTECH",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -33,15 +33,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Welcome to $name!",
         modifier = modifier
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ConstrutechAppTheme {
-        Greeting("Android")
-    }
 }
