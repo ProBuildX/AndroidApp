@@ -241,61 +241,61 @@ fun AddProjectScreen(navController: NavController) {
                     tint = Color.Black // Cambia el color si es necesario
                 )
             }
-//
-//            // Campos de entrada
-//            TextField(
-//                value = title,
-//                onValueChange = { title = it },
-//                label = { Text("Title") },
-//                modifier = Modifier.fillMaxWidth()
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//
-//            TextField(
-//                value = description,
-//                onValueChange = { description = it },
-//                label = { Text("Description") },
-//                modifier = Modifier.fillMaxWidth()
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//
-//            TextField(
-//                value = address,
-//                onValueChange = { address = it },
-//                label = { Text("Address") },
-//                modifier = Modifier.fillMaxWidth()
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//
-//            TextField(
-//                value = date,
-//                onValueChange = { date = it },
-//                label = { Text("Date") },
-//                modifier = Modifier.fillMaxWidth()
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//
-//            TextField(
-//                value = budget,
-//                onValueChange = { budget = it },
-//                label = { Text("Budget") },
-//                modifier = Modifier.fillMaxWidth()
-//            )
-//            Spacer(modifier = Modifier.weight(1f)) // Esto empuja el botón hacia abajo
-//        }
-//
-//        // Botón para guardar en la parte inferior
-//        Button(
-//            onClick = { /* Lógica para guardar el proyecto */ },
-//            colors = ButtonDefaults.buttonColors(Color(0xFFFFA726)),
-//            shape = RoundedCornerShape(16.dp),
-//            modifier = Modifier
-//                .align(Alignment.BottomCenter) // Pegado a la parte inferior
-//                .fillMaxWidth()
-//                .padding(vertical = 16.dp)
-//        ) {
-//            Text(text = "Save", fontSize = 16.sp)
-//        }
-//    }
-//}
-//
+
+            // Campos de entrada
+            TextField(
+                value = title,
+                onValueChange = { title = it },
+                label = { Text("Title") },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            TextField(
+                value = description,
+                onValueChange = { description = it },
+                label = { Text("Description") },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            TextField(
+                value = address,
+                onValueChange = { address = it },
+                label = { Text("Address") },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            TextField(
+                value = date,
+                onValueChange = { date = it },
+                label = { Text("Date") },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
+            TextField(
+                value = budget,
+                onValueChange = { budget = it },
+                label = { Text("Budget") },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.weight(1f)) // Esto empuja el botón hacia abajo
+        }
+
+        // Botón para guardar en la parte inferior
+        Button(
+            onClick = { /* Lógica para guardar el proyecto */ },
+            colors = ButtonDefaults.buttonColors(Color(0xFFFFA726)),
+            shape = RoundedCornerShape(16.dp),
+            modifier = Modifier
+                .align(Alignment.BottomCenter) // Pegado a la parte inferior
+                .fillMaxWidth()
+                .padding(vertical = 16.dp)
+        ) {
+            Text(text = "Save", fontSize = 16.sp)
+        }
+    }
+}
+
