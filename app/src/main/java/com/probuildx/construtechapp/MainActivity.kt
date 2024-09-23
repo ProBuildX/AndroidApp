@@ -198,49 +198,49 @@ fun DetailOption(title: String, icon: @Composable () -> Unit) {
     }
 }
 
-//@Composable
-//fun AddProjectScreen(navController: NavController) {
-//    var title by remember { mutableStateOf("") }
-//    var description by remember { mutableStateOf("") }
-//    var address by remember { mutableStateOf("") }
-//    var date by remember { mutableStateOf("") }
-//    var budget by remember { mutableStateOf("") }
-//    var imageUri by remember { mutableStateOf<Uri?>(null) }
-//
-//    Box(
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .padding(16.dp)
-//            .background(Color(0xFFF7F4F3))
-//    ) {
-//        Column(
-//            modifier = Modifier.fillMaxSize(),
-//            verticalArrangement = Arrangement.Top
-//        ) {
-//            Text(
-//                text = "Add New Project",
-//                fontSize = 24.sp,
-//                fontWeight = FontWeight.Bold,
-//                modifier = Modifier.padding(bottom = 16.dp)
-//            )
-//
-//            // Botón para seleccionar una imagen (circular y más grande)
-//            Button(
-//                onClick = { /* Lógica para seleccionar imagen */ },
-//                colors = ButtonDefaults.buttonColors(Color(0xFFd9d9d9)),
-//                shape = RoundedCornerShape(50), // Círculo
-//                modifier = Modifier
-//                    .size(80.dp) // Tamaño más grande del botón
-//                    .align(Alignment.CenterHorizontally) // Centrado
-//                    .padding(bottom = 16.dp) // Espacio inferior
-//            ) {
-//                Icon(
-//                    imageVector = Icons.Filled.Image, // Usa el ícono de imagen
-//                    contentDescription = "Select Image",
-//                    modifier = Modifier.size(40.dp), // Ajusta el tamaño del ícono
-//                    tint = Color.Black // Cambia el color si es necesario
-//                )
-//            }
+@Composable
+fun AddProjectScreen(navController: NavController) {
+    var title by remember { mutableStateOf("") }
+    var description by remember { mutableStateOf("") }
+    var address by remember { mutableStateOf("") }
+    var date by remember { mutableStateOf("") }
+    var budget by remember { mutableStateOf("") }
+    var imageUri by remember { mutableStateOf<Uri?>(null) }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+            .background(Color(0xFFF7F4F3))
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Top
+        ) {
+            Text(
+                text = "Add New Project",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+
+            // Botón para seleccionar una imagen (circular y más grande)
+            Button(
+                onClick = { /* Lógica para seleccionar imagen */ },
+                colors = ButtonDefaults.buttonColors(Color(0xFFd9d9d9)),
+                shape = RoundedCornerShape(50), // Círculo
+                modifier = Modifier
+                    .size(80.dp) // Tamaño más grande del botón
+                    .align(Alignment.CenterHorizontally) // Centrado
+                    .padding(bottom = 16.dp) // Espacio inferior
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.Image, // Usa el ícono de imagen
+                    contentDescription = "Select Image",
+                    modifier = Modifier.size(40.dp), // Ajusta el tamaño del ícono
+                    tint = Color.Black // Cambia el color si es necesario
+                )
+            }
 //
 //            // Campos de entrada
 //            TextField(
