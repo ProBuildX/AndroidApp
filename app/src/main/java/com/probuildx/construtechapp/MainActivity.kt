@@ -52,68 +52,68 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//@Composable
-//fun ProjectListScreen(navController: NavController) {
-//    Column(
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .padding(16.dp)
-//            .background(Color(0xFFF7F4F3)), // Color de fondo
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        // Título de la aplicación
-//        Text(
-//            text = "Construtech",
-//            fontSize = 28.sp,
-//            fontWeight = FontWeight.Bold,
-//            modifier = Modifier.align(Alignment.CenterHorizontally)
-//        )
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        Text(
-//            text = "Welcome Back!",
-//            fontSize = 20.sp, // Tamaño reducido
-//            fontWeight = FontWeight.Bold,
-//            modifier = Modifier.align(Alignment.Start)
-//        )
-//
-//        Spacer(modifier = Modifier.height(8.dp))
-//
-//        Text(
-//            text = "USER",
-//            fontSize = 16.sp,
-//            fontWeight = FontWeight.Light,
-//            modifier = Modifier.align(Alignment.Start)
-//        )
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        ProjectCard(
-//            title = "Office building in San Isidro",
-//            description = "Construcción de un moderno edificio de oficinas en el corazón de San Isidro, diseñado para fomentar un ambiente de trabajo colaborativo. El edificio contará con espacios flexibles, áreas de descanso, y tecnología de punta para asegurar la comodidad y productividad de los ocupantes",
-//            onClick = { navController.navigate("project_details/Office building in San Isidro") }
-//        )
-//        Spacer(modifier = Modifier.height(16.dp))
-//        ProjectCard(
-//            title = "Road Maintenance in San Borja",
-//            description = "Mantenimiento de carreteras en San Borja tiene como objetivo mejorar la infraestructura vial del distrito, garantizando un tránsito seguro y eficiente. Se llevarán a cabo trabajos de repavimentación, reparación de baches, y mejora de la señalización.",
-//            onClick = { navController.navigate("project_details/Road Maintenance in San Borja") }
-//        )
-//        Spacer(modifier = Modifier.weight(1f))
-//
-//        Button(
-//            onClick = { navController.navigate("add_project") },
-//            colors = ButtonDefaults.buttonColors(Color(0xFFFFA726)),
-//            shape = RoundedCornerShape(16.dp),
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .height(50.dp)
-//        ) {
-//            Text(text = "NEW PROJECT", fontSize = 16.sp)
-//        }
-//    }
-//}
+@Composable
+fun ProjectListScreen(navController: NavController) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+            .background(Color(0xFFF7F4F3)), // Color de fondo
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        // Título de la aplicación
+        Text(
+            text = "Construtech",
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Text(
+            text = "Welcome Back!",
+            fontSize = 20.sp, // Tamaño reducido
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.Start)
+        )
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Text(
+            text = "USER",
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Light,
+            modifier = Modifier.align(Alignment.Start)
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        ProjectCard(
+            title = "Office building in San Isidro",
+            description = "Construcción de un moderno edificio de oficinas en el corazón de San Isidro, diseñado para fomentar un ambiente de trabajo colaborativo. El edificio contará con espacios flexibles, áreas de descanso, y tecnología de punta para asegurar la comodidad y productividad de los ocupantes",
+            onClick = { navController.navigate("project_details/Office building in San Isidro") }
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        ProjectCard(
+            title = "Road Maintenance in San Borja",
+            description = "Mantenimiento de carreteras en San Borja tiene como objetivo mejorar la infraestructura vial del distrito, garantizando un tránsito seguro y eficiente. Se llevarán a cabo trabajos de repavimentación, reparación de baches, y mejora de la señalización.",
+            onClick = { navController.navigate("project_details/Road Maintenance in San Borja") }
+        )
+        Spacer(modifier = Modifier.weight(1f))
+
+        Button(
+            onClick = { navController.navigate("add_project") },
+            colors = ButtonDefaults.buttonColors(Color(0xFFFFA726)),
+            shape = RoundedCornerShape(16.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp)
+        ) {
+            Text(text = "NEW PROJECT", fontSize = 16.sp)
+        }
+    }
+}
 //
 //@Composable
 //fun ProjectCard(title: String, description: String, onClick: () -> Unit) {
