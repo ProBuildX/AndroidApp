@@ -135,47 +135,47 @@ fun ProjectCard(title: String, description: String, onClick: () -> Unit) {
         }
     }
 }
-//
-//// Pantalla de detalles del proyecto
-//@Composable
-//fun ProjectDetailScreen(projectTitle: String) {
-//    Column(
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .padding(16.dp)
-//            .background(Color(0xFFF7F4F3)),
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ) {
-//        Text(
-//            text = projectTitle,
-//            fontSize = 20.sp,
-//            fontWeight = FontWeight.Bold,
-//            modifier = Modifier.align(Alignment.CenterHorizontally)
-//        )
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        // Muestra las opciones del proyecto
-//        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
-//            DetailOption(title = "Project Profile") { Icon(Icons.Filled.Info, contentDescription = "Project Profile") }
-//            DetailOption(title = "Workers & Teams") { Icon(Icons.Filled.Group, contentDescription = "Workers & Teams") }
-//        }
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
-//            DetailOption(title = "Resource Management") { Icon(Icons.Filled.Storage, contentDescription = "Resource Management") }
-//            DetailOption(title = "Tasks") { Icon(Icons.Filled.Checklist, contentDescription = "Tasks") }
-//        }
-//
-//        Spacer(modifier = Modifier.height(16.dp))
-//
-//        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-//            DetailOption(title = "Options") { Icon(Icons.Filled.Settings, contentDescription = "Options") }
-//        }
-//    }
-//}
-//
+
+// Pantalla de detalles del proyecto
+@Composable
+fun ProjectDetailScreen(projectTitle: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+            .background(Color(0xFFF7F4F3)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = projectTitle,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Muestra las opciones del proyecto
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
+            DetailOption(title = "Project Profile") { Icon(Icons.Filled.Info, contentDescription = "Project Profile") }
+            DetailOption(title = "Workers & Teams") { Icon(Icons.Filled.Group, contentDescription = "Workers & Teams") }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceAround) {
+            DetailOption(title = "Resource Management") { Icon(Icons.Filled.Storage, contentDescription = "Resource Management") }
+            DetailOption(title = "Tasks") { Icon(Icons.Filled.Checklist, contentDescription = "Tasks") }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+            DetailOption(title = "Options") { Icon(Icons.Filled.Settings, contentDescription = "Options") }
+        }
+    }
+}
+
 //@Composable
 //fun DetailOption(title: String, icon: @Composable () -> Unit) {
 //    Card(
