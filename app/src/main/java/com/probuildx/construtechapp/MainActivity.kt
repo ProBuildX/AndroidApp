@@ -176,28 +176,28 @@ fun ProjectDetailScreen(projectTitle: String) {
     }
 }
 
-//@Composable
-//fun DetailOption(title: String, icon: @Composable () -> Unit) {
-//    Card(
-//        shape = RoundedCornerShape(16.dp),
-//        modifier = Modifier.size(120.dp),
-//        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
-//    ) {
-//        Column(
-//            modifier = Modifier
-//                .padding(16.dp)
-//                .fillMaxSize(),
-//            horizontalAlignment = Alignment.CenterHorizontally,
-//            verticalArrangement = Arrangement.Center
-//        ) {
-//            // Usar el ícono como composable
-//            icon()
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(text = title, fontSize = 14.sp, fontWeight = FontWeight.Medium)
-//        }
-//    }
-//}
-//
+@Composable
+fun DetailOption(title: String, icon: @Composable () -> Unit) {
+    Card(
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.size(120.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+    ) {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxSize(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            // Usar el ícono como composable
+            icon()
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text = title, fontSize = 14.sp, fontWeight = FontWeight.Medium)
+        }
+    }
+}
+
 //@Composable
 //fun AddProjectScreen(navController: NavController) {
 //    var title by remember { mutableStateOf("") }
