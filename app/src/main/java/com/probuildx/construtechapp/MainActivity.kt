@@ -114,27 +114,27 @@ fun ProjectListScreen(navController: NavController) {
         }
     }
 }
-//
-//@Composable
-//fun ProjectCard(title: String, description: String, onClick: () -> Unit) {
-//    Card(
-//        shape = RoundedCornerShape(16.dp),
-//        modifier = Modifier
-//            .fillMaxWidth()
-//            .clickable(onClick = onClick),
-//        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
-//    ) {
-//        Column(
-//            modifier = Modifier
-//                .padding(16.dp)
-//                .fillMaxWidth()
-//        ) {
-//            Text(text = title, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(text = description, fontSize = 14.sp)
-//        }
-//    }
-//}
+
+@Composable
+fun ProjectCard(title: String, description: String, onClick: () -> Unit) {
+    Card(
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+    ) {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxWidth()
+        ) {
+            Text(text = title, fontSize = 18.sp, fontWeight = FontWeight.Bold)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(text = description, fontSize = 14.sp)
+        }
+    }
+}
 //
 //// Pantalla de detalles del proyecto
 //@Composable
