@@ -1,5 +1,6 @@
 package com.probuildx.construtechapp.domain.documents
 
+//Document Repo
 interface DocumentRepository {
     suspend fun getAllDocuments(): List<Document>
     suspend fun getDocumentById(id: String): Document?
