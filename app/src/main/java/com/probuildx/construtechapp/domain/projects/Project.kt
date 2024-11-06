@@ -3,12 +3,11 @@ package com.probuildx.construtechapp.domain.projects
 import java.util.UUID
 
 data class Project(
-    val id: String = UUID.randomUUID().toString(),
-    val name: String,
-    val description: String,
-    val startDate: String,
-    val endDate: String,
-    val status: ProjectStatus
+    var title: String,
+    var description: String,
+    var address: String,
+    var date: String,
+    var budget: String
 )
 
 enum class ProjectStatus {
