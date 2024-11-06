@@ -34,6 +34,7 @@ import androidx.compose.material.icons.filled.Image
 
 import com.probuildx.construtechapp.ui.theme.ConstructechAppTheme
 
+//Main Activity
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
