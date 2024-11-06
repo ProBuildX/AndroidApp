@@ -7,8 +7,11 @@ import com.probuildx.construtechapp.domain.personnel.Team
 import com.probuildx.construtechapp.domain.personnel.Worker
 import com.probuildx.construtechapp.domain.personnel.WorkerRole
 import com.probuildx.construtechapp.domain.projects.Project
+import com.probuildx.construtechapp.domain.resources.Resource
+import com.probuildx.construtechapp.domain.resources.ResourceType
+import com.probuildx.construtechapp.domain.tasks.Task
+import com.probuildx.construtechapp.domain.tasks.TaskStatus
 import kotlinx.coroutines.launch
-
 
 class ProjectViewModel : ViewModel() {
     private val _projects = mutableStateListOf<Project>()
@@ -16,6 +19,12 @@ class ProjectViewModel : ViewModel() {
 
     private val _teams = mutableStateListOf<Team>()
     val teams: List<Team> get() = _teams
+
+    private val _resources = mutableStateListOf<Resource>()
+    val resources: List<Resource> get() = _resources
+
+    private val _tasks = mutableStateListOf<Task>()
+    val tasks: List<Task> get() = _tasks
 
     init {
         initializeSampleData()
@@ -53,6 +62,20 @@ class ProjectViewModel : ViewModel() {
                 )
             )
         )
+
+        _resources.addAll(
+            listOf(
+                Resource(name = "Cement", description = "Building material", resourceType = ResourceType.MATERIAL, quantity = 100, unitCost = 5.0),
+                Resource(name = "Excavator", description = "Heavy equipment", resourceType = ResourceType.EQUIPMENT, quantity = 2, unitCost = 150.0)
+            )
+        )
+
+        _tasks.addAll(
+            listOf(
+                Task(title = "Architectural Design", description = "Design main building layout", assignedTeam = "teamA", startDate = "2024-01-01", endDate = "2024-02-01", status = TaskStatus.IN_PROGRESS),
+                Task(title = "Foundation Work", description = "Prepare and pour foundation", assignedTeam = "teamB", startDate = "2024-02-10", endDate = "2024-03-15", status = TaskStatus.PENDING)
+            )
+        )
     }
 
     fun saveProject(project: Project) {
@@ -70,6 +93,21 @@ class ProjectViewModel : ViewModel() {
         return _projects.find { it.title == title }
     }
 
+    fun addResource(resource: Resource) {
+        _resources.add(resource)
+    }
+
+    fun updateResource(updatedResource: Resource) {
+        val index = _resources.indexOfFirst { it.id == updatedResource.id }
+        if (index != -1) {
+            _resources[index] = updatedResource
+        }
+    }
+
+    fun removeResource(resourceId: String) {
+        _resources.removeAll { it.id == resourceId }
+    }
+
     fun changeWorkerTeam(worker: Worker, newTeamId: String) {
         val currentTeam = _teams.find { it.members.contains(worker) }
         currentTeam?.let {
@@ -79,6 +117,28 @@ class ProjectViewModel : ViewModel() {
         val newTeam = _teams.find { it.id == newTeamId }
         newTeam?.let {
             _teams[_teams.indexOf(it)] = it.copy(members = it.members + worker)
+        }
+    }
+
+    fun addTask(task: Task) {
+        _tasks.add(task)
+    }
+
+    fun updateTask(updatedTask: Task) {
+        val index = _tasks.indexOfFirst { it.id == updatedTask.id }
+        if (index != -1) {
+            _tasks[index] = updatedTask
+        }
+    }
+
+    fun removeTask(taskId: String) {
+        _tasks.removeAll { it.id == taskId }
+    }
+
+    fun changeTaskStatus(taskId: String, newStatus: TaskStatus) {
+        val index = _tasks.indexOfFirst { it.id == taskId }
+        if (index != -1) {
+            _tasks[index] = _tasks[index].copy(status = newStatus)
         }
     }
 }
