@@ -1,9 +1,10 @@
-package com.probuildx.construtechapp.domain.projects
-
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.UUID
 
+@Entity(tableName = "project_table")
 data class Project(
-    val id: String = UUID.randomUUID().toString(),
+    @PrimaryKey val id: String = UUID.randomUUID().toString(),
     val name: String,
     val description: String,
     val startDate: String,

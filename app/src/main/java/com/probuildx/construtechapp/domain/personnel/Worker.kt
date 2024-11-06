@@ -1,9 +1,12 @@
 package com.probuildx.construtechapp.domain.personnel
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.UUID
 
+@Entity(tableName = "worker_table")
 data class Worker(
-    val id: String = UUID.randomUUID().toString(),
+    @PrimaryKey val id: String = UUID.randomUUID().toString(),
     val name: String,
     val role: WorkerRole,
     val workedHours: Int = 0

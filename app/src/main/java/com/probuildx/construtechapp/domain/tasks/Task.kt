@@ -1,9 +1,12 @@
 package com.probuildx.construtechapp.domain.tasks
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.util.UUID
 
+@Entity(tableName = "task_table")
 data class Task(
-    val id: String = UUID.randomUUID().toString(),
+    @PrimaryKey val id: String = UUID.randomUUID().toString(),
     val title: String,
     val description: String,
     val assignedTeam: String,
@@ -15,4 +18,3 @@ data class Task(
 enum class TaskStatus {
     PENDING, IN_PROGRESS, COMPLETED, CANCELLED
 }
-
